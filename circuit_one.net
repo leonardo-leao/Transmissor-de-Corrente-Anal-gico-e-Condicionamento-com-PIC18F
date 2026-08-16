@@ -1,0 +1,18 @@
+* C:\Users\sirle\OneDrive\Documentos\PBLE03\circuits\circuit_one.asc
+XU1 N002 0 Vcc 0 N001 LM358
+XU2 Vl 0 Vcc LM7805
+VL Vl 0 24V
+RL1 0 Io 110
+R2 0 Io 16k
+R1 N002 Io 1k
+RIN N002 +V 2k
+Q1 Vcc N001 0 0 NPN
+V1 +V 0 5v
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\sirle\AppData\Local\LTspice\lib\cmp\standard.bjt
+.dc V1 0 5 0.1
+.lib LM358.MOD
+.lib regulators.lib
+.backanno
+.end
